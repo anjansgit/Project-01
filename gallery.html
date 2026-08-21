@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A small gallery of colorful moments." />
+    <title>Gallery · Hello</title>
+    <style>
+      :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+      * { box-sizing: border-box; }
+      body { min-height: 100vh; margin: 0; color: #f8fafc; background: radial-gradient(circle at 12% 18%, #7c3aed 0, transparent 30rem), radial-gradient(circle at 86% 76%, #06b6d4 0, transparent 28rem), #07111f; }
+      nav { display: flex; justify-content: space-between; align-items: center; width: min(90%, 70rem); margin: 1.5rem auto; }
+      .brand { color: #fff; font-weight: 800; letter-spacing: -.04em; text-decoration: none; }
+      nav ul { display: flex; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+      nav a:not(.brand) { padding: .55rem .85rem; border-radius: 999px; color: #cbd5e1; text-decoration: none; }
+      nav a:not(.brand):hover, nav a[aria-current="page"] { color: #fff; background: rgb(255 255 255 / .12); }
+      main { width: min(90%, 70rem); margin: clamp(3rem, 7vh, 5rem) auto; animation: appear .7s both; }
+      .eyebrow { margin: 0 0 1rem; color: #a5f3fc; font-size: .78rem; font-weight: 750; letter-spacing: .18em; text-transform: uppercase; }
+      h1 { margin: 0; font-size: clamp(3.2rem, 9vw, 6.5rem); line-height: .9; letter-spacing: -.075em; background: linear-gradient(115deg, #fff 22%, #c4b5fd 52%, #67e8f9 82%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .intro { max-width: 35rem; margin: 1.5rem 0 2.25rem; color: #cbd5e1; font-size: 1.08rem; line-height: 1.7; }
+      .grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 9rem; gap: 1rem; }
+      figure { position: relative; display: flex; align-items: end; margin: 0; overflow: hidden; border: 1px solid rgb(255 255 255 / .16); border-radius: 1.35rem; background: var(--bg); box-shadow: inset 0 -5rem 4rem rgb(0 0 0 / .25); transition: transform .25s ease, border-color .25s ease; }
+      figure:hover { transform: translateY(-.35rem); border-color: rgb(255 255 255 / .45); }
+      figure::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 75% 20%, rgb(255 255 255 / .42), transparent 28%), linear-gradient(135deg, transparent 40%, rgb(255 255 255 / .12)); }
+      figcaption { position: relative; padding: 1.25rem; font-size: 1.1rem; font-weight: 750; letter-spacing: -.02em; }
+      .one { grid-column: span 7; grid-row: span 2; --bg: linear-gradient(135deg, #f97316, #ec4899 52%, #7c3aed); }
+      .two { grid-column: span 5; --bg: linear-gradient(135deg, #06b6d4, #2563eb); }
+      .three { grid-column: span 5; --bg: linear-gradient(135deg, #84cc16, #14b8a6); }
+      .four { grid-column: span 4; --bg: linear-gradient(135deg, #a855f7, #ec4899); }
+      .five { grid-column: span 8; --bg: linear-gradient(135deg, #0f766e, #06b6d4, #67e8f9); }
+      @keyframes appear { from { opacity: 0; transform: translateY(1.5rem); } to { opacity: 1; transform: translateY(0); } }
+      @media (max-width: 42rem) { nav { align-items: flex-start; gap: 1rem; } nav ul { flex-wrap: wrap; justify-content: flex-end; } .grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 10rem; } .one, .two, .three, .four, .five { grid-column: span 1; grid-row: span 1; } }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Main navigation"><a class="brand" href="index.html">hello.</a><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html" aria-current="page">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <main>
+      <p class="eyebrow">Visual notes</p>
+      <h1>Color, captured.</h1>
+      <p class="intro">A collection of imagined places, late-night ideas, and bright little moments—each with its own mood.</p>
+      <section class="grid" aria-label="Gallery">
+        <figure class="one"><figcaption>Golden hour</figcaption></figure>
+        <figure class="two"><figcaption>Blue hour</figcaption></figure>
+        <figure class="three"><figcaption>New growth</figcaption></figure>
+        <figure class="four"><figcaption>Afterglow</figcaption></figure>
+        <figure class="five"><figcaption>Still water</figcaption></figure>
+      </section>
+    </main>
+  </body>
+</html>
